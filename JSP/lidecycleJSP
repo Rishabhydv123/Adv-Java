@@ -1,0 +1,76 @@
+JSP LIFE CYCLE
+
+The JSP (JavaServer Pages) Life Cycle describes how a JSP file is processed from the moment a client requests it until it is destroyed by the server. Internally, a JSP is converted into a servlet.
+
+Phases of JSP Life Cycle:
+
+1. Translation Phase
+- The JSP file (.jsp) is converted into a Java servlet source file (.java).
+- Happens only the first time the JSP is requested or when it is modified.
+
+2. Compilation Phase
+- The generated servlet (.java) is compiled into a .class file.
+- Syntax errors occur in this phase.
+
+3. Class Loading
+- The compiled servlet class is loaded into memory.
+
+4. Instantiation
+- An object of the servlet class is created.
+- Happens only once.
+
+5. Initialization (jspInit())
+- Called only once when the JSP is initialized.
+- Used to initialize resources.
+
+Example:
+public void jspInit() {
+    // initialization code
+}
+
+6. Request Processing (_jspService())
+- Called for every client request.
+- Handles request and response.
+- Cannot be overridden.
+
+Example:
+public void _jspService(HttpServletRequest request, HttpServletResponse response) {
+    // service logic
+}
+
+7. Destruction (jspDestroy())
+- Called when JSP is removed from service.
+- Used to release resources.
+
+Example:
+public void jspDestroy() {
+    // cleanup code
+}
+
+Flow:
+JSP → Servlet (.java) → Class (.class)
+      ↓
+   jspInit()
+      ↓
+ _jspService() (multiple times)
+      ↓
+  jspDestroy()
+
+Key Points:
+- JSP is converted into a servlet.
+- jspInit() and jspDestroy() are called only once.
+- _jspService() is called multiple times for each request.
+
+
+
+
+
+
+Life Cycle JSP:----
+
+
+1)Translation Phase
+2)Compilation Phase
+3)Initialization phase
+4)execution Phase
+5)Destruction Phase
