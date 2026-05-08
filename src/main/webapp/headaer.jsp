@@ -65,7 +65,7 @@ out.println("<p style='color: blue; font-size: 20px; font-weight: bold;'>Additio
 out.println("<p style='color: green; font-size: 20px; font-weight: bold;'>sub: " + Sub + "</p>");
 out.println("<p style='color: red; font-size: 20px; font-weight: bold;'>Mul: " + mul + "</p>");
 out.println("<p style='color: Yellow; font-size: 20px; font-weight: bold;'>Divs: " + Div + "</p>");
-%>
+%> 
 
 </body>
 </html>
