@@ -25,6 +25,7 @@ int div(int a, int b){
 out.println("Hello : " + name );
 </jsp:scriptlet>
 <br>
+
 <!-- Expression -->
 Divide value is :
 <jsp:expression>
